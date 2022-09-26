@@ -14,9 +14,15 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: docker.io/rich19971997/reverseproxy:v2
+        image: rich19971997/reverseproxy:v1
         ports:
         - containerPort: 80
+         resources:
+          limits:
+          cpu: 500m
+       requests:
+       cpu: 200m
+
 
 
 ---

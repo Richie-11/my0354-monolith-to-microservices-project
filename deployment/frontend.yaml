@@ -14,9 +14,14 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: docker.io/rich19971997/udagram-frontend:v2
+        image: rich19971997/udagram-frontend:v2
         ports:
         - containerPort: 80
+        resources:
+         limits:
+          cpu: 500m
+       requests:
+       cpu: 200m
 
 
 ---
